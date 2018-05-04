@@ -2,8 +2,6 @@
 
 # Dataframes
 
-# EM624 - Exercise 06
-
 import pandas as pd
 
 # to load the 3 datasets (movies.dat, users.dat, ratings.dat) into pandas dataframes
@@ -41,6 +39,6 @@ print "\nThe last 5 rows of merged dataframe are:"
 print data[-5:]
 
 # to print the 5 occupations that give higher ratings for movies
-df3 = data.groupby('Occupation').sum().sort_values(by='Rating', ascending=False)
+df3 = data.groupby('Occupation').mean().sort_values(by='Rating', ascending=False)
 print "\nThe 5 occupations that give higher ratings for movies are:"
 print df3[:5]
